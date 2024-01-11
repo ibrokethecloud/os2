@@ -30,7 +30,7 @@ RUN rm -f /etc/cos/config
 
 # Download rancherd
 ARG RANCHERD_VERSION=v0.1.0-rc3
-RUN curl -o /usr/bin/rancherd -sfL "https://github.com/rancher/rancherd/releases/download/${RANCHERD_VERSION}/rancherd-amd64" && chmod 0755 /usr/bin/rancherd
+RUN curl -o /usr/bin/rancherd -sfL "https://github.com/rancher/rancherd/releases/download/${RANCHERD_VERSION}/rancherd-${ARCH}" && chmod 0755 /usr/bin/rancherd
 
 # Download nerdctl
 ARG NERDCTL_VERSION=1.2.1
