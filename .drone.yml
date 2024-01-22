@@ -293,8 +293,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-dev-head-amd64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "dev-head-amd64"
       dry_run: true
       context: nvidia-driver-toolkit
       build_args:
@@ -309,8 +309,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-dev-head-amd64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "dev-head-amd64"
       context: nvidia-driver-toolkit
       build_args:
         - ARCH=amd64
@@ -330,8 +330,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-sle-micro-head-amd64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "sle-micro-head-amd64"
       dry_run: true
       context: nvidia-driver-toolkit
       build_args:
@@ -346,8 +346,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-sle-micro-head-amd64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "sle-micro-head-amd64"
       context: nvidia-driver-toolkit
       build_args:
         - ARCH=amd64
@@ -368,8 +368,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-${DRONE_TAG}-amd64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "${DRONE_TAG}-amd64"
       context: nvidia-driver-toolkit
       build_args:
         - ARCH=amd64
@@ -397,8 +397,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-dev-head-arm64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "dev-head-arm64"
       context: nvidia-driver-toolkit
       dry_run: true
       build_args:
@@ -413,8 +413,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-dev-head-arm64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "dev-head-arm64"
       context: nvidia-driver-toolkit
       build_args:
         - ARCH=arm64
@@ -434,8 +434,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-sle-micro-head-arm64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "sle-micro-head-arm64"
       context: nvidia-driver-toolkit
       dry_run: true
       build_args:
@@ -450,8 +450,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-sle-micro-head-arm64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "sle-micro-head-arm64"
       context: nvidia-driver-toolkit
       build_args:
         - ARCH=arm64
@@ -472,8 +472,8 @@ steps:
     image: plugins/docker
     settings:
       dockerfile: nvidia-driver-toolkit/Dockerfile
-      repo: "rancher/harvester-os"
-      tag: "nvidia-driver-toolkit-${DRONE_TAG}-arm64"
+      repo: "rancher/harvester-nvidia-driver-toolkit"
+      tag: "${DRONE_TAG}-arm64"
       context: nvidia-driver-toolkit
       build_args:
         - ARCH=arm64
@@ -500,8 +500,8 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      target: "rancher/harvester-os:nvidia-driver-toolkit-dev-head"
-      template: "rancher/harvester-os:nvidia-driver-toolkit-dev-head-ARCH"
+      target: "rancher/harvester-nvidia-driver-toolkit:dev-head"
+      template: "rancher/harvester-nvidia-driver-toolkit:dev-head-ARCH"
       ignore_missing: true
       platforms:
         - linux/amd64
@@ -521,8 +521,8 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      target: "rancher/harvester-os:nvidia-driver-toolkit-${DRONE_TAG}"
-      template: "rancher/harvester-os:nvidia-driver-toolkit-${DRONE_TAG}-ARCH"
+      target: "rancher/harvester-nvidia-driver-toolkit:${DRONE_TAG}"
+      template: "rancher/harvester-nvidia-driver-toolkit:${DRONE_TAG}-ARCH"
       ignore_missing: true
       platforms:
         - linux/amd64
@@ -542,8 +542,8 @@ steps:
         from_secret: docker_username
       password:
         from_secret: docker_password
-      target: "rancher/harvester-os:nvidia-driver-toolkit-sle-micro-head"
-      template: "rancher/harvester-os:nvidia-driver-toolkit-sle-micro-head-ARCH"
+      target: "rancher/harvester-nvidia-driver-toolkit:sle-micro-head"
+      template: "rancher/harvester-nvidia-driver-toolkit:sle-micro-head-ARCH"
       ignore_missing: true
       platforms:
         - linux/amd64
